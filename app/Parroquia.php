@@ -9,7 +9,7 @@ class Parroquia extends Model
 	protected $hidden = array('created_at', 'updated_at', 'id', 'municipio_id');
 
 	public function municipio() {
-		return $this->belongsTo('municipio');
+		return $this->belongsTo('App\Municipio');
 	}
 
 

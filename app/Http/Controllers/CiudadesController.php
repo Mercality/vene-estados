@@ -16,10 +16,15 @@ class CiudadesController extends Controller
         //
     }
 
-    public function index() {
+    public function index(Request $request) {
+        
+        $est = filter_var($request['est'], FILTER_VALIDATE_BOOLEAN);
 
+        $ciudades = \App\Ciudad::all();
 
-        return \App\Ciudad::all();
+        if ($est) $ciudades->load('estado');
+
+        return $ciudades;
     }
 
     public function update(Request $request) {

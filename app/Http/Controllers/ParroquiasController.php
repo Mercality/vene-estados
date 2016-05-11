@@ -16,10 +16,17 @@ class ParroquiasController extends Controller
         //
     }
 
-    public function index() {
+    public function index(Request $request) {
 
+        $mun = filter_var($request['mun'], FILTER_VALIDATE_BOOLEAN);
+        $est = filter_var($request['est'], FILTER_VALIDATE_BOOLEAN);
 
-        return \App\Parroquia::all();
+        $parroquias = \App\Parroquia::all();
+
+        if ($mun && $est) $parroquias->load('municipio.estado');
+        if ($mun && !$est) $parroquias->load('municipio');
+
+        return $parroquias;
     }
 
     public function update(Request $request) {

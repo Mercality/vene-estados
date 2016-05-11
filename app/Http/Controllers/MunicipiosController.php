@@ -16,10 +16,16 @@ class MunicipiosController extends Controller
         //
     }
 
-    public function index() {
+    public function index(Request $request) {
+        $est = filter_var($request['est'], FILTER_VALIDATE_BOOLEAN);
+        $parr = filter_var($request['parr'], FILTER_VALIDATE_BOOLEAN);
 
+        $municipios = \App\Municipio::all();
 
-        return \App\Municipio::all();
+        if ($est) $municipios->load('estado');
+        if ($parr) $municipios->load('parroquias');
+
+        return $municipios;
     }
 
     public function update(Request $request) {

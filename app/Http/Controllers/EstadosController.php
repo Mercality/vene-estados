@@ -20,13 +20,13 @@ class EstadosController extends Controller
 
         $mun = filter_var($request['mun'], FILTER_VALIDATE_BOOLEAN);
         $parr = filter_var($request['parr'], FILTER_VALIDATE_BOOLEAN);
-        $cities = filter_var($request['cities'], FILTER_VALIDATE_BOOLEAN);
+        $city = filter_var($request['city'], FILTER_VALIDATE_BOOLEAN);
 
         $estados = \App\Estado::all();
 
         if ($mun && !$parr) $estados->load('municipios');
         if ($mun && $parr) $estados->load('municipios.parroquias');
-        if ($cities) $estados->load('ciudades');
+        if ($city) $estados->load('ciudades');
 
         return $estados;
     }
