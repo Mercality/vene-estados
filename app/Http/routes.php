@@ -15,10 +15,7 @@ $app->get('/', function () use ($app) {
     return $app->version();
 });
 
-$app->get('/estados', function () use ($app) {
-    return \App\Estado::with('municipios.parroquias')->get();
-});
-
-$app->get('/municipios', function () use ($app) {
-    return \App\Municipio::with('estado')->get();
-});
+$app->get('/estados', 'EstadosController@index');
+$app->get('/municipios', 'MunicipiosController@index');
+$app->get('/parroquias', 'ParroquiasController@index');
+$app->get('/ciudades', 'CiudadesController@index');
