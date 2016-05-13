@@ -12,7 +12,7 @@
 */
 
 $app->get('/', function () use ($app) {
-    return $app->version();
+    return view('index');
 });
 
 $app->get('/estados', 'EstadosController@index');

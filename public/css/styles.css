@@ -1,0 +1,13 @@
+/**
+*
+* Navbar Styles
+*
+**/
+a.btn.btn-flat.hide-on-med-and-up:hover {
+    box-shadow: none !important;
+    background: 0;
+}
+
+a.btn.btn-flat.hide-on-med-and-up {
+    position:absolute;
+}
