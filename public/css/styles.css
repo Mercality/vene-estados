@@ -11,3 +11,22 @@ a.btn.btn-flat.hide-on-med-and-up:hover {
 a.btn.btn-flat.hide-on-med-and-up {
     position:absolute;
 }
+
+
+h1>span {
+    font-size:32px;
+}
+
+@media (min-width:991px) {
+	.brand-logo {
+		margin-left: 10px;
+	}	
+}
+
+.container {
+	width:80%;
+}
+
+.text-med {
+	font-size: 18px;
+}
