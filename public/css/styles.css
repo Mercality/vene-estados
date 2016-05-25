@@ -3,6 +3,10 @@
 * Navbar Styles
 *
 **/
+
+h1 {
+	 margin: 2.9rem 0 1.83rem 0;
+}
 a.btn.btn-flat.hide-on-med-and-up:hover {
     box-shadow: none !important;
     background: 0;
@@ -29,4 +33,26 @@ h1>span {
 
 .text-med {
 	font-size: 18px;
+}
+
+.code-title {
+	overflow-x: auto;
+	overflow-y: hidden;
+	white-space: nowrap; 
+}
+
+.x2 {
+	font-size: 2rem;
+}
+
+.social-icon {
+	color:white;
+}
+
+.social-icon:hover, a:hover {
+	color:#FF5722;
+}
+
+.url .hljs-comment {
+	color:white;
 }

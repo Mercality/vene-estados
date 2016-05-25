@@ -1,6 +1,6 @@
 <div class="row">
 		<div class="col s12 m6">                         
-		<h5>Estados</h5>
+		<h5 class="code-title">Estados</h5>
 <pre><code class="json" data-lang="javascript">[
     {
     "name": "Amazonas",
@@ -16,7 +16,7 @@
 		</div>
 
 		<div class="col s12 m6">                         
-		<h5>Ciudades</h5>
+		<h5 class="code-title">Ciudades</h5>
 <pre><code class="json" data-lang="javascript">[
     {
     "name": "Maroa",
@@ -32,7 +32,7 @@
 		</div>
 
 		<div class="col s12 m6">                         
-		<h5>Estado + Municipios + Parroquias</h5>
+		<h5 class="code-title">Estado + Municipios + Parroquias</h5>
 <pre><code class="json" data-lang="javascript">{  
    "name":"Guárico",
    "iso":"VE-J",
@@ -55,7 +55,7 @@
 		</div>
 
 		<div class="col s12 m6">                         
-		<h5>Estado + Ciudades</h5>
+		<h5 class="code-title">Estado + Ciudades</h5>
 <pre><code class="json" data-lang="javascript">{
    "name":"Distrito Capital",
    "iso":"VE-A",
