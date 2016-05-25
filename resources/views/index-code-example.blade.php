@@ -1,5 +1,5 @@
 <div class="row">
-		<div class="col s12 m6">                         
+		<div class="col s12 m6">
 		<h5 class="code-title">Estados</h5>
 <pre><code class="json" data-lang="javascript">[
     {
@@ -15,7 +15,7 @@
 </code></pre>
 </div>
 
-		<div class="col s12 m6">                         
+		<div class="col s12 m6">
 		<h5 class="code-title">Ciudades</h5>
 
 
@@ -33,29 +33,9 @@
 
 		</div>
 
-		<div class="col s12 m6">                         
-		<h5 class="code-title">Estado + Municipios + Parroquias</h5>
-<pre><code class="json" data-lang="javascript">{  
-   "name":"Guárico",
-   "iso":"VE-J",
-   "municipios":[  
-      {  
-         "name":"Leonardo Infante",
-         "parroquias":[  
-            {  
-               "name":"Valle de la Pascua"
-            },
-            {  
-               "name":"Espino"
-            }
-         ]
-      }
-   ]
-}
-</code></pre>
-</div>
 
-		<div class="col s12 m6">                         
+
+		<div class="col s12 m6">
 		<h5 class="code-title">Estado + Ciudades</h5>
 <pre><code class="json" data-lang="javascript">{
    "name":"Distrito Capital",
@@ -77,5 +57,30 @@
 </code></pre>
 
 		</div>
+
+
+		<div class="col s12 m6">
+		<h5 class="code-title">Estado + Municipios + Parroquias</h5>
+<pre><code class="json" data-lang="javascript">{
+   "name":"Guárico",
+   "iso":"VE-J",
+   "municipios":[
+      {
+         "name":"Leonardo Infante",
+         "parroquias":[
+            {
+               "name":"Valle de la Pascua"
+            },
+            {
+               "name":"Espino"
+            }
+         ]
+      }
+   ]
+}
+</code></pre>
+</div>
+
+
 
 </div>
