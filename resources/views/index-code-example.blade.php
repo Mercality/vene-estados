@@ -11,12 +11,14 @@
     "iso": "VE-B"
     },
     ...
-]</code></pre>
-
-		</div>
+]
+</code></pre>
+</div>
 
 		<div class="col s12 m6">                         
 		<h5 class="code-title">Ciudades</h5>
+
+
 <pre><code class="json" data-lang="javascript">[
     {
     "name": "Maroa",
@@ -51,8 +53,7 @@
    ]
 }
 </code></pre>
-
-		</div>
+</div>
 
 		<div class="col s12 m6">                         
 		<h5 class="code-title">Estado + Ciudades</h5>
@@ -72,7 +73,7 @@
 },
 
 
- 
+
 </code></pre>
 
 		</div>
