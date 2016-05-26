@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Utils\Utils;
 
 class CiudadesController extends Controller
 {
@@ -19,10 +20,13 @@ class CiudadesController extends Controller
     public function index(Request $request) {
         
         $est = filter_var($request['est'], FILTER_VALIDATE_BOOLEAN);
+        $ids = filter_var($request['ids'], FILTER_VALIDATE_BOOLEAN);
 
         $ciudades = \App\Ciudad::all();
 
         if ($est) $ciudades->load('estado');
+
+        if (!$ids) Utils::hideId($ciudades);
 
         return $ciudades;
     }
