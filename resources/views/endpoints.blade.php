@@ -39,6 +39,47 @@
         &est=true //Carga el estado al que pertenece cada ciudad
     </code>
 
-    <h5>Mostrando Unique IDs</h5>
+    <h5>Mostrando IDs Únicos</h5>
     <p>Es posible que para la elaboración de select boxes así como para relacionar tablas en una base de datos necesitemos IDs unicos que identifiquen cada estado, municipio, parroquia o ciudad, para ello solo hay que incluir:</p>
     <code>&ids=true</code>
+
+    <p>Con esta url:</p>
+    <pre><code class="url">https://estados.venedatos.com.ve/api/v1/estados?mun=true&parr=true&city=true&ids=true</code></pre>
+    <p>Se obtiene el siguiente resultado:</p>
+
+<pre><code class="json">{  
+   "id":9,
+   "name":"Delta Amacuro",
+   "iso":"VE-Y",
+   "municipios":[  
+      {  
+         "id":100,
+         "name":"Antonio Díaz",
+         "estado_id":9,
+         "parroquias":[  
+            {  
+               "id":309,
+               "name":"Curiapo",
+               "municipio_id":100
+            },
+            {  
+               "id":310,
+               "name":"Almirante Luis Brión",
+               "municipio_id":100
+            },
+            ...
+         ]
+      },
+      ...
+   ],
+   "ciudades": [
+      {
+         "id": 148,
+         "name": "Tucupita",
+         "estado_id": 9,
+         "capital": 1
+      }
+   ]
+},
+...
+</code></pre>
