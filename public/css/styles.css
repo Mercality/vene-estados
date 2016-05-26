@@ -1,3 +1,7 @@
+body {
+	min-width: 350px;
+}
+
 /**
 *
 * Navbar Styles
@@ -24,8 +28,27 @@ h1>span {
 @media (min-width:991px) {
 	.brand-logo {
 		margin-left: 10px;
-	}	
+	}
 }
+
+@media only screen and (min-width: 811px) {
+	a.hide-on-med-and-up {
+	    display: none !important;
+	}
+}
+
+@media only screen and (min-width: 610px) and (max-width: 811px) {
+	a.hide-on-med-and-up {
+	    display: block !important;
+	}
+}
+
+@media  (max-width: 811px) {
+	.hide-on-small-only, .hide-on-small-and-down {
+	    display: none !important;
+	}
+}
+
 
 .container {
 	width:80%;
@@ -38,7 +61,7 @@ h1>span {
 .code-title {
 	overflow-x: auto;
 	overflow-y: hidden;
-	white-space: nowrap; 
+	white-space: nowrap;
 }
 
 .x2 {
