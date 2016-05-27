@@ -19,3 +19,7 @@ $app->get('/estados', 'EstadosController@index');
 $app->get('/municipios', 'MunicipiosController@index');
 $app->get('/parroquias', 'ParroquiasController@index');
 $app->get('/ciudades', 'CiudadesController@index');
+
+$app->post('oauth/access_token', function() {
+    return response()->json(Authorizer::issueAccessToken());
+});
