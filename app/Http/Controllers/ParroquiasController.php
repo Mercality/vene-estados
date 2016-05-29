@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Utils\Utils;
 
 class ParroquiasController extends Controller
 {
@@ -20,11 +21,14 @@ class ParroquiasController extends Controller
 
         $mun = filter_var($request['mun'], FILTER_VALIDATE_BOOLEAN);
         $est = filter_var($request['est'], FILTER_VALIDATE_BOOLEAN);
+        $ids = filter_var($request['ids'], FILTER_VALIDATE_BOOLEAN);
 
         $parroquias = \App\Parroquia::all();
 
         if ($mun && $est) $parroquias->load('municipio.estado');
         if ($mun && !$est) $parroquias->load('municipio');
+
+        if (!$ids) Utils::hideId($parroquias);
 
         return $parroquias;
     }

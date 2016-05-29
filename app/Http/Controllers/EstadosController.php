@@ -3,9 +3,11 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Utils\Utils;
 
 class EstadosController extends Controller
 {
+ 
     /**
      * Create a new controller instance.
      *
@@ -17,10 +19,12 @@ class EstadosController extends Controller
     }
 
     public function index(Request $request) {
+        
 
         $mun = filter_var($request['mun'], FILTER_VALIDATE_BOOLEAN);
         $parr = filter_var($request['parr'], FILTER_VALIDATE_BOOLEAN);
         $city = filter_var($request['city'], FILTER_VALIDATE_BOOLEAN);
+        $ids = filter_var($request['ids'], FILTER_VALIDATE_BOOLEAN);
 
         $estados = \App\Estado::all();
 
@@ -28,6 +32,8 @@ class EstadosController extends Controller
         if ($mun && $parr) $estados->load('municipios.parroquias');
         if ($city) $estados->load('ciudades');
 
+        if (!$ids) Utils::hideId($estados);
+        
         return $estados;
     }
 
@@ -40,5 +46,7 @@ class EstadosController extends Controller
         return 'Success';
     }
 
+    
+    
     //
 }
