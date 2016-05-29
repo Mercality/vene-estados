@@ -1,4 +1,4 @@
-<h4>Ejemplo de una API Call</h4>
+<h4 class="title">Ejemplo de una API Call</h4>
 
 <div class="row">
 <div class="col s12 m8 l6">

@@ -1,3 +1,6 @@
+
+<h4 class="title">Ejemplos</h4>
+
 <div class="row">
 		<div class="col s12 m6">
 		<h5 class="code-title">Estados</h5>

@@ -1,4 +1,4 @@
-<h4>Una Iniciativa Pensada Para Desarrolladores</h4>
+<h4 class="title">Una Iniciativa Pensada Para Desarrolladores</h4>
 	  	<p class="text-med">
 	  		VenEstados es una iniciativa pensada para todos aquellos desarrolladores que en algún punto hemos necesitado de una base de datos simple y completa de la información territorial de Venezuela, ya sea para una aplicación, página web entre otros. <br><br>
         Con ayuda de la base de datos provista por <a href="https://github.com/marydn/venezuela-sql">Mary de Nóbrega</a>

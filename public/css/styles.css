@@ -79,3 +79,8 @@ h1>span {
 .url .hljs-comment {
 	color:white;
 }
+
+.title {
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
