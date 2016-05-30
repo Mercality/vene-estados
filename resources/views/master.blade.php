@@ -27,18 +27,23 @@
         
         
       <!--Import jQuery before materialize.js-->
-      <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+      <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.2.min.js"></script>
       <script type="text/javascript" src="js/materialize.min.js"></script>
       <script src="/js/highlight.js"></script>
       <!-- Place this tag in your head or just before your close body tag. -->
       <script async defer src="https://buttons.github.io/buttons.js"></script>
       <script>
-        hljs.initHighlightingOnLoad();
-        $(".button-collapse").sideNav();
-        
-        $("#menu-btn").click(function(e) {
-          $('.button-collapse').sideNav('show');  
+        $(document).ready(function() {
+            hljs.initHighlightingOnLoad();
+          $(".button-collapse").sideNav();
+          
+          $("#menu-btn").click(function(e) {
+            $('.button-collapse').sideNav('show');  
+          });
+
+          $(".dropdown-button").dropdown({ hover: false });
         });
+        
       </script> 
     </body>
   </html>

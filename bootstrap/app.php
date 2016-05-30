@@ -63,9 +63,9 @@ $app->singleton(
 //    App\Http\Middleware\ExampleMiddleware::class
 // ]);
 
-// $app->routeMiddleware([
-//     'auth' => App\Http\Middleware\Authenticate::class,
-// ]);
+ $app->routeMiddleware([
+     'auth' => App\Http\Middleware\Authenticate::class,
+ ]);
 
 $app->middleware([
     \LucaDegasperi\OAuth2Server\Middleware\OAuthExceptionHandlerMiddleware::class
@@ -90,7 +90,7 @@ $app->routeMiddleware([
 */
 
 // $app->register(App\Providers\AppServiceProvider::class);
-// $app->register(App\Providers\AuthServiceProvider::class);
+$app->register(App\Providers\AuthServiceProvider::class);
 // $app->register(App\Providers\EventServiceProvider::class);
 $app->register(\LucaDegasperi\OAuth2Server\Storage\FluentStorageServiceProvider::class);
 $app->register(\LucaDegasperi\OAuth2Server\OAuth2ServerServiceProvider::class);

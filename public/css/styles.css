@@ -8,6 +8,21 @@ body {
 *
 **/
 
+i>span {
+    font-size: 1rem;
+    font-style: normal;
+    font-family: roboto;
+    vertical-align: middle;
+}
+
+.side-nav i.icon-github-circled.social-icon {
+	color:#333;
+}
+
+.side-nav i.icon-github-circled.social-icon:hover {
+	color:#FF5722;
+}
+
 h1 {
 	 margin: 2.9rem 0 1.83rem 0;
 }
