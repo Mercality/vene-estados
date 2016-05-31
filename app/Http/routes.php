@@ -37,13 +37,13 @@ $app->get('oauth/github/authorize', function(\Illuminate\Http\Request $request) 
 
 	$client = new GuzzleHttp\Client();
 
-	
+
 	$res = $client->request('POST', 'https://github.com/login/oauth/access_token?'.http_build_query($params), [
     	'headers' => ['Accept' => 'application/json']
 	]);
 
 	$body = json_decode($res->getBody());
-
+    if ($body->access_token) abort(401);
 	$token = $body->access_token;
 
 	$res = $client->request('GET', 'https://api.github.com/user', [
@@ -65,8 +65,8 @@ $app->get('oauth/github/authorize', function(\Illuminate\Http\Request $request) 
 		return redirect('/?api_token='.encrypt($token));
 	} else {
 		$user = \App\User::create([
-			'name' => $userData->name, 
-			'login' => $userData->login, 
+			'name' => $userData->name,
+			'login' => $userData->login,
 			'api_token' => $token,
 			'avatar_url' => $userData->avatar_url.'&s=40'
 			]);
