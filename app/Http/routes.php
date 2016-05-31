@@ -59,11 +59,17 @@ $app->get('oauth/github/authorize', function(\Illuminate\Http\Request $request) 
 
 	if ($user) {
 		$user->api_token = $token;
+		$user->avatar_url = $userData->avatar_url.'&s=40';
 		$user->save();
 
 		return redirect('/?api_token='.encrypt($token));
 	} else {
-		$user = \App\User::create(['name' => $userData->name, 'login' => $userData->login, 'api_token' => $token]);
+		$user = \App\User::create([
+			'name' => $userData->name, 
+			'login' => $userData->login, 
+			'api_token' => $token,
+			'avatar_url' => $userData->avatar_url.'&s=40'
+			]);
 		return redirect('/?api_token='.encrypt($token));
 	}
 

@@ -15,6 +15,21 @@ i>span {
     vertical-align: middle;
 }
 
+.dropdown-button img {
+	vertical-align: middle;
+}
+
+a.disabled {
+	background:#ccc;
+}
+
+a.disabled:hover {
+	background:#ccc;
+}
+
+.dropdown-button i {
+	margin:0;
+}
 .side-nav i.icon-github-circled.social-icon {
 	color:#333;
 }
