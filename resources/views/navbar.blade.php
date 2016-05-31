@@ -21,7 +21,7 @@
       </ul>
 
       <ul id="dropdown2" class="dropdown-content">
-      <li><a class="disabled" href="#">Usuario: {{Auth::user()->login}}</a></li>
+      <li><a class="disabled" href="#">Usuario: @if(Auth::check()) {{Auth::user()->login}} @endif</a></li>
         <li class="divider"></li>
         <li><a href="user/keys">API Key</a></li>
         <li><a href="user/logout">Cerrar Sesion</a></li>
