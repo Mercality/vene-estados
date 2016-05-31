@@ -44,6 +44,36 @@ $app->get('oauth/github/authorize', function(\Illuminate\Http\Request $request) 
 
 	$body = json_decode($res->getBody());
 
-	dd($body);
+	$token = $body->access_token;
 
+	$res = $client->request('GET', 'https://api.github.com/user', [
+    	'headers' => [
+    		'Accept' => 'application/json',
+    		'Authorization' => 'Bearer '.$token
+    	]
+	]);
+
+	$userData = json_decode($res->getBody());
+
+	$user = \App\User::whereLogin($userData->login)->first();
+
+	if ($user) {
+		$user->api_token = $token;
+		$user->save();
+
+		return redirect('/?api_token='.encrypt($token));
+	} else {
+		$user = \App\User::create(['name' => $userData->name, 'login' => $userData->login, 'api_token' => $token]);
+		return redirect('/?api_token='.encrypt($token));
+	}
+
+	redirect('/');
+
+});
+
+$app->get('logout', function() {
+	$string = encrypt('token');
+	dd(decrypt($string));
+
+	redirect('/');
 });
