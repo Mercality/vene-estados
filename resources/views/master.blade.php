@@ -2,7 +2,7 @@
   <html>
     <head>
       <!--Import Google Icon Font-->
-      <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
       <!--Import materialize.css-->
       <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
       <link type="text/css" rel="stylesheet" href="css/styles.css"/>
@@ -15,17 +15,17 @@
     <body class="grey lighten-3">
       @include('navbar')
       <div class="container">
-        
+
         @yield('content')
       </div>
-      
+
       @include('footer')
-      
-     
-        
-        
-        
-        
+
+
+
+
+
+
       <!--Import jQuery before materialize.js-->
       <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.2.min.js"></script>
       <script type="text/javascript" src="js/materialize.min.js"></script>
@@ -36,14 +36,14 @@
         $(document).ready(function() {
             hljs.initHighlightingOnLoad();
           $(".button-collapse").sideNav();
-          
+
           $("#menu-btn").click(function(e) {
-            $('.button-collapse').sideNav('show');  
+            $('.button-collapse').sideNav('show');
           });
 
           $(".dropdown-button").dropdown({ hover: false });
         });
-        
-      </script> 
+
+      </script>
     </body>
   </html>
