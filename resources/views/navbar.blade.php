@@ -11,7 +11,7 @@
         <li><a href="badges.html">VenRIF</a></li>
         <li><a href="collapsible.html">Ven</a></li>
         @if(!Auth::check())<li><a href="github_login"><i  class="icon-github-circled social-icon"><span>Github Login</span></i></a></li> @endif
-        @if(Auth::check())<li><a class="dropdown-button" data-activates="dropdown1" href="#">Perfil<i class="material-icons right">arrow_drop_down</i></a></li>@endif
+        @if(Auth::check())<li><a class="dropdown-button" data-activates="dropdown2" href="#">Perfil<i class="material-icons right">arrow_drop_down</i></a></li>@endif
       </ul>
 
       <ul id="dropdown1" class="dropdown-content">
