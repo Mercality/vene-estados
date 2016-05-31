@@ -43,7 +43,7 @@ $app->get('oauth/github/authorize', function(\Illuminate\Http\Request $request) 
 	]);
 
 	$body = json_decode($res->getBody());
-    if ($body->access_token) abort(401);
+    if (!isset($body->access_token)) abort(401);
 	$token = $body->access_token;
 
 	$res = $client->request('GET', 'https://api.github.com/user', [
