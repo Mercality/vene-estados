@@ -62,19 +62,19 @@ h1>span {
 	}
 }
 
-@media only screen and (min-width: 811px) {
+@media only screen and (min-width: 990px) {
 	a.hide-on-med-and-up {
 	    display: none !important;
 	}
 }
 
-@media only screen and (min-width: 610px) and (max-width: 811px) {
+@media only screen and (min-width: 610px) and (max-width: 990px) {
 	a.hide-on-med-and-up {
 	    display: block !important;
 	}
 }
 
-@media  (max-width: 811px) {
+@media  (max-width: 990px) {
 	.hide-on-small-only, .hide-on-small-and-down {
 	    display: none !important;
 	}
