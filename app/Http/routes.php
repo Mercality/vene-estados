@@ -20,6 +20,10 @@ $app->get('/municipios', 'MunicipiosController@index');
 $app->get('/parroquias', 'ParroquiasController@index');
 $app->get('/ciudades', 'CiudadesController@index');
 
+$app->get('/user/keys', function() {
+    return view('apikey-page');
+});
+
 $app->post('oauth/access_token', function() {
     return response()->json(Authorizer::issueAccessToken());
 });
