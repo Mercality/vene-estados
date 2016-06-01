@@ -78,6 +78,7 @@ $app->get('oauth/github/authorize', function(\Illuminate\Http\Request $request) 
 });
 
 $app->get('logout', function() {
+  dd(urlT('/'));
 	$string = encrypt('token');
 	dd(decrypt($string));
 
