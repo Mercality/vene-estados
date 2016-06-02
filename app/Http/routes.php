@@ -20,6 +20,18 @@ $app->get('/municipios', 'MunicipiosController@index');
 $app->get('/parroquias', 'ParroquiasController@index');
 $app->get('/ciudades', 'CiudadesController@index');
 
+$app->group(['middleware' => 'throttle:5,1'], function () use ($app) {
+    $app->get('/tot', function () use ($app) {
+        return $app->version();
+    });
+});
+
+
+
+
+
+
+
 $app->get('/user/keys', function() {
     return view('apikey-page');
 });
