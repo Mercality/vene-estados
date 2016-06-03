@@ -30,6 +30,8 @@
       <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.2.min.js"></script>
       <script type="text/javascript" src="{{url('js/materialize.min.js')}}"></script>
       <script src="/js/highlight.js"></script>
+      <script src="/js/clipboard.min.js"></script>
+      <script src="/js/scripts.js"></script>
       <!-- Place this tag in your head or just before your close body tag. -->
       <script async defer src="https://buttons.github.io/buttons.js"></script>
       <script>
