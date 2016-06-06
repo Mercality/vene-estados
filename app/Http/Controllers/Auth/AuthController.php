@@ -10,6 +10,16 @@ class AuthController extends BaseController
         return response()->json(\Authorizer::issueAccessToken());
     }
 
+    public function checkForToken() {
+        if (!\Auth::check()) abort(401);
+
+        $user = \Auth::user();
+
+        $token = $this->getTokenFromDb($user->access_token);
+
+        return response()->json(['access_token' => $token->id]);
+    }
+
     public function getObtainToken() {
         if (!\Auth::check()) abort(401);
 
@@ -17,7 +27,12 @@ class AuthController extends BaseController
 
         $token = $this->getTokenFromDb($user->access_token);
 
-        $expired = $this->verifyExpiry($token);
+        if ($token !== null) {
+            $expired = $this->verifyExpiry($token);
+        }  else {
+            $expired = true;
+        }
+
 
 
         if(!$expired) {

@@ -39,6 +39,8 @@ $app->get('/user/keys', function() {
 });
 $app->get('user/issue_token', 'Auth\AuthController@getObtainToken');
 
+$app->get('user/checkfortoken', 'Auth\AuthController@checkForToken');
+
 $app->post('oauth/access_token', 'Auth\AuthController@issueAccessToken');
 
 
